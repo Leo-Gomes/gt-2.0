@@ -14,14 +14,14 @@
         <form>
             <div>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" class="bloco">
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" class="bloco">
             </div>
             <div>
-                <label for="data-nasc">Data de nascimento</label>
+                <label for="data-nasc" class="bloco">Data de nascimento</label>
                 <select name="" id="">
                     <option value="">1</option>
                     <option value="">2</option>
@@ -87,18 +87,19 @@
                 </select>
             </div>
             <div>
-                <label for="genero">Gênero</label>
-                <input type="radio" name="genero" id="f">
-                <label for="f">F</label>
-                <input type="radio" name="genero" id="m">
-                <label for="m">M</label>
-                <input type="radio" name="genero" id="outro">
-                <label for="outro">Outro</label>
-                <textarea name="outro" id="outro" placeholder="Descreva caso selecionar outro"></textarea>
-
+                <label for="genero" class="bloco">Gênero</label>
+                <div class="inline">
+                    <input type="radio" name="genero" id="f">
+                    <label for="f">F</label>
+                    <input type="radio" name="genero" id="m">
+                    <label for="m">M</label>
+                    <input type="radio" name="genero" id="outro">
+                    <label for="outro">Outro</label>
+                    <textarea name="outro" id="outro" placeholder="Descreva caso selecionar outro"></textarea>
+                </div>
             </div>
             <div>
-                <label>Stack</label>
+                <label class="bloco">Stack</label>
 
                 <input type="checkbox" name="stack" id="html">
                 <label for="html">HTML</label>
@@ -118,7 +119,7 @@
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha" class="bloco">
             </div>
             <button type="submit">Cadastrar</button>
         </form>
