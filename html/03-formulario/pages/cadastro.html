@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de cadastro</title>
-    <link rel="stylesheet" href="../styles/formulario.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
 </head>
 
 <body>
@@ -87,8 +87,8 @@
                 </select>
             </div>
             <div>
-                <label for="genero" class="bloco">Gênero</label>
-                <div class="inline">
+                <label for="genero">Gênero</label>
+                <div class="gender">
                     <input type="radio" name="genero" id="f">
                     <label for="f">F</label>
                     <input type="radio" name="genero" id="m">
@@ -98,9 +98,9 @@
                     <textarea name="outro" id="outro" placeholder="Descreva caso selecionar outro"></textarea>
                 </div>
             </div>
-            <div>
-                <label class="bloco">Stack</label>
 
+            <label class="bloco">Stack</label>
+            <div class="stack">
                 <input type="checkbox" name="stack" id="html">
                 <label for="html">HTML</label>
 
@@ -115,13 +115,13 @@
 
                 <input type="checkbox" name="stack" id="sql">
                 <label for="sql">Sql</label>
-
             </div>
+
             <div>
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha" class="bloco">
             </div>
-            <button type="submit">Cadastrar</button>
+            <button type="submit" class="btn">Cadastrar</button>
         </form>
 
         <p>Já tem cadastro? <a href="./formulario.html">Entre aqui</a>.</p>
