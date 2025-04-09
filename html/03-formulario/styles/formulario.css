@@ -1,17 +1,70 @@
 body{
 background-color: #20aaaa;
+display: flex;
+justify-content: center;
+margin-top: 5%;
 }
 
 main{
     background-color: white;
-    width: 50%;
     border-radius: 10px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1{
     text-align: center;
+    
 }
 
+input, select{
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 10px 0px;
+    padding: 5px;
+
+}
+
+#nome, #email, #senha{
+    width: 100%;
+}
+
+.bloco{
+    display: block;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    color: #000;
+    background-color: rgb(3, 231, 41);
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 5px;
+    margin-left: 10px;
+}
+button:hover{
+    color: #000;
+    background-color: #0af;
+    width: 100%;
+}
+
+label{
+    font-weight: bold;
+}
+
+.gen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
