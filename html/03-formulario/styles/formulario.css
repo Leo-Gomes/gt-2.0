@@ -1,7 +1,19 @@
+:root{
+    --primary: #f7efef;
+}
+
+
+*{
+    outline: 0;
+    border: 0;
+}
+
+
 body{
 background-color: #20aaaa;
 display: flex;
 justify-content: center;
+<<<<<<< HEAD
 margin-top: 5%;
 }
 
@@ -13,11 +25,29 @@ main{
     flex-direction: column;
     align-items: center;
     }
+=======
+align-items: center;
+}
+
+main{
+    background-color: var(--primary);
+    width: 35%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10%;
+
+}
+>>>>>>> 84cf037989b322d4298764f9abae9d5bbc0f197f
 
 form{
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     justify-content: center;
+=======
+    align-items: center;
+>>>>>>> 84cf037989b322d4298764f9abae9d5bbc0f197f
 }
 
 h1{
@@ -25,6 +55,7 @@ h1{
     
 }
 
+<<<<<<< HEAD
 input, select{
     border: 1px solid #ccc;
     border-radius: 7px;
@@ -37,10 +68,13 @@ input, select{
     width: 100%;
 }
 
+=======
+>>>>>>> 84cf037989b322d4298764f9abae9d5bbc0f197f
 .bloco{
     display: block;
 }
 
+<<<<<<< HEAD
 textarea{
     resize: none;
 }
@@ -68,3 +102,35 @@ label{
     align-items: center;
     justify-content: space-between;
 }
+=======
+
+input{
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 7px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+
+button{
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color:#2099ff;
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #20ffae;
+}
+
+p{
+    text-align: center;
+}
+
+>>>>>>> 84cf037989b322d4298764f9abae9d5bbc0f197f
