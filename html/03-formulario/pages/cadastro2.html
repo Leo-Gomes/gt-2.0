@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/cadastro.css">
     <title>Cadastro</title>
 </head>
 
@@ -20,7 +21,7 @@
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="Digite uma senha">
 
-            <label for="genero">Gênero</label>
+            <label for="genero" class="bloco">Gênero</label>
             <input type="radio" name="genero" id="f">
             <label for="f">Feminino</label>
 
@@ -29,9 +30,9 @@
 
             <input type="radio" name="genero" id="o">
             <label for="o">Outro</label>
-            <textarea name="genero" id="o" placeholder="Caso outro, descreva"></textarea>
+            <textarea name="genero" id="o" style="resize: none;" placeholder="Caso outro, descreva"></textarea>
 
-            <label for="stack">Stack</label>
+            <label for="stack" class="bloco">Stack</label>
 
             <input type="checkbox" name="stack" id="html">
             <label for="html">HTML</label>
@@ -42,13 +43,15 @@
             <input type="checkbox" name="stack" id="sql">
             <label for="sql">SQL</label>
 
-            <label for="">Selecionar turno</label>
+            <label for="" class="bloco">Selecionar turno</label>
 
             <select name="" id="">
                 <option value="manha">Manhã</option>
                 <option value="tarde">Tarde</option>
                 <option value="noite">Noite</option>
             </select>
+
+            <button>Cadastrar</button>
 
         </form>
     </main>
