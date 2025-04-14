@@ -1,19 +1,19 @@
-*{
+* {
     border: 0px;
     padding: 0px;
     outline: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #ccc;
 }
 
-main{
+main {
     width: 100%;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,39 +22,62 @@ header{
     padding: 5px;
 }
 
-.logo{
+.logo,
+nav {
     display: flex;
 }
 
-.aside{
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ccc;
-    width: 40px;
-    height: 40px;
-    border-radius: 7px;
-    cursor: pointer;
+    margin-right: 30px;
 }
-.aside:hover{
+
+nav ul li {
+    margin-right: 30px;
+    background-color: rgb(65, 141, 122);
+    padding: 5px;
+    border-radius: 7px;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: rgb(89, 174, 153);
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-header{
+    display: flex;
+}
+
+.form-header button{
+    padding: 5px;
+    color: white;
+    background-color: rgb(65, 141, 122);;
+    border-radius: 0px 0px 7px ;
+}
+
+input[type=text] {
+    border-radius: 7px 0px 0px;
+    padding: 5px;
+    width: 80%;
+}
+
+.aside:hover {
     width: 43px;
     height: 43px;
     background-color: #bbb;
 }
 
-.aside div{
-    width: 25px;
-    height: 3px;
-    background-color: blue;
-    margin: 3px 0px;
-}
-
-section{
+section {
     width: 100%;
 }
 
-.cards{
+.cards {
     display: flex;
     flex-wrap: wrap;
     background-color: #DDD;
@@ -64,25 +87,25 @@ section{
     width: 100%;
 }
 
-.card{
+.card {
     background-color: #ccc;
     border-radius: 7px;
     padding: 10px;
-    margin-right: 5px ;
-    margin-bottom: 5px ;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
-.image{
+.image {
     position: relative;
     text-align: center;
     margin: 2px 0px;
 }
 
-.image p{
+.image p {
     background-color: rgb(0, 255, 0);
     top: 0;
     right: 0;
-    position:absolute;
+    position: absolute;
     font-size: 9px;
     padding: 2px;
     border-radius: 5px;
@@ -94,34 +117,49 @@ section{
     border-radius: 7px;
 }
 
-.add{
+.add {
     display: flex;
     font-size: 8px;
     justify-content: space-between;
 }
 
-button{
+button {
     background-color: rgb(54, 239, 54);
     width: 27px;
     border-radius: 7px;
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(0, 255, 0);
     width: 29px;
 }
 
-h2{
+h2 {
     font-size: 11px;
 }
 
-.price{
+.price {
     font-size: 15px;
 }
 
-@media (max-width:925px){
-    .cards{
+@media (max-width:925px) {
+    .cards {
         justify-content: flex-start;
+    }
+}
+@media (max-width:850px) {
+    form input, nav {
+        display: none;
+    }
+}
+@media (min-width:850px) {
+    .aside-nav {
+        display: none;
+    }
+}
+@media (max-width:720px) {
+    .cards {
+        justify-content: center;
     }
 }
