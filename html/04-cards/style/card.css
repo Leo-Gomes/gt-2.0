@@ -1,16 +1,26 @@
 * {
     border: 0px;
     padding: 0px;
+    margin: 0px;
     outline: 0px;
     box-sizing: border-box;
+    list-style: none;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+  }
 
 body {
-    background-color: #ccc;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 main {
     width: 100%;
+    flex: 1;
 }
 
 header {
@@ -18,13 +28,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(137, 209, 191);
-    border-radius: 7px;
     padding: 5px;
+    flex-wrap: wrap;
 }
 
-.logo,
-nav {
+.logo, nav {
     display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -52,6 +62,7 @@ a {
 
 .form-header{
     display: flex;
+    width: 40%;
 }
 
 .form-header button{
@@ -73,17 +84,12 @@ input[type=text] {
     background-color: #bbb;
 }
 
-section {
-    width: 100%;
-}
-
 .cards {
     display: flex;
     flex-wrap: wrap;
     background-color: #DDD;
     padding: 15px;
     justify-content: space-between;
-    border-radius: 10px;
     width: 100%;
 }
 
@@ -93,6 +99,7 @@ section {
     padding: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
+    height: 200px;
 }
 
 .image {
@@ -137,23 +144,59 @@ button:hover {
 
 h2 {
     font-size: 11px;
+    margin: 5px 0px;
 }
 
 .price {
     font-size: 15px;
+    margin-top: 10px;
 }
 
-@media (max-width:925px) {
+footer{
+    background-color: rgb(137, 209, 191);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer div{
+    background-color: white;
+    height: 1px;
+    width: 40%;
+    margin: 5px 0px;
+}
+
+.sec-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+footer h2{
+    font-size: 25px;
+}
+
+
+@media (max-width:1080px) {
     .cards {
         justify-content: flex-start;
+        align-content: flex-start;
     }
 }
-@media (max-width:850px) {
-    form input, nav {
+@media (max-width:870px) {
+    nav {
         display: none;
     }
+    .logo img {
+        width: 60px;
+    }
 }
-@media (min-width:850px) {
+@media (min-width:870px) {
     .aside-nav {
         display: none;
     }
@@ -161,5 +204,36 @@ h2 {
 @media (max-width:720px) {
     .cards {
         justify-content: center;
+    }
+}
+@media (max-width:580px) {
+    footer {
+        font-size: 12px;
+    }
+
+    footer h2{
+        font-size: 18px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}
+@media (max-width:444px) {
+    .form-header {
+    order: 1;
+    width: 100%;
+    }
+    .form-header input{
+        width: 95%;
+    }
+    footer {
+        font-size: 8px;
+    }
+
+    footer h2{
+        font-size: 12px;
+    }
+    footer p{
+        font-size: 6px;
     }
 }
