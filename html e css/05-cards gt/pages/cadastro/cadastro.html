@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tela de cadastro</title>
+</head>
+
+<body class="bg-gray-300 flex justify-center">
+    <main class="bg-white w-[400px] p-5 rounded-md">
+        <h1 class="font-bold text-2xl">Criar conta</h1>
+        <form>
+            <label for="nome">Nome</label>
+            <input class="border w-full rounded-md p-1" type="text" id="nome">
+    
+            <label for="email">Email</label>
+            <input class="border w-full rounded-md p-1" type="email" name="email" id="email">
+    
+            <label for="cep">CEP</label>
+            <input onkeyup="buscarCep()" class="border w-full rounded-md p-1" type="text">
+    
+            <label for="rua">Endereço</label>
+            <input class="border w-full rounded-md p-1" type="text" id="rua">
+    
+            <label for="bairro">Bairro</label>
+            <input class="border w-full rounded-md p-1" type="text" id="bairro">
+    
+            <label for="estado">Estado</label>
+            <input class="border w-full rounded-md p-1" type="text" id="estado">
+
+            <label for="cidade">Cidade</label>
+            <input class="border w-full rounded-md p-1" type="text" id="cidade">
+    
+            <label for="senha">Senha</label>
+            <input class="border w-full rounded-md p-1" type="password" id="senha">
+    
+            <button class="bg-blue-900 w-full text-white p-1 rounded-md my-4 hover:bg-blue-900/90">Cadastrar</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
