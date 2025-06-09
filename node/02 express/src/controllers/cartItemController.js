@@ -1,13 +1,14 @@
 const { inserirItensService, deletarItensService, alterarItensService } = require("../services/cartItemService");
 
 
-const inserirItens = async (params, body) => {
+const inserirItens = async (req, res) => {
 
     // iserir itens
     const { cart_id, product_id, quantity } = req.body;
-
     try {
         const result = await inserirItensService(cart_id, product_id, quantity)
+        console.log(cart_id, product_id, quantity)
+
         res.status(201).json(result);
     } catch (error) {
         console.log("Erro ao inserir item no carrinho", error);

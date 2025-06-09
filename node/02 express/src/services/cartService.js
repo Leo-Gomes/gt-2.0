@@ -5,7 +5,7 @@ async function criarCarrinhoService(user_id) {
     return await criarCarrinhoRepository(user_id)
 }
 
-async function listaCarrinhoService(cart_id) {
+async function listarCarrinhoService(cart_id) {
     return await listarCarrinhoItensRepository(cart_id)
 }
 
@@ -14,5 +14,5 @@ async function limparCarrinhoService(cart_id) {
 }
 
 module.exports = {
-    criarCarrinhoService,listaCarrinhoService,limparCarrinhoService
+    criarCarrinhoService,listarCarrinhoService,limparCarrinhoService
 }

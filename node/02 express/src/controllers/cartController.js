@@ -1,5 +1,5 @@
 const { deletarItensService } = require('../services/cartItemService.js');
-const {criarCarrinhoService, limparCarrinhoService} = require('../services/cartService.js')
+const {criarCarrinhoService, limparCarrinhoService, listarCarrinhoService} = require('../services/cartService.js')
 
 const criarCarrinho = async (req, res) => {
     const { user_id } = req.body;
@@ -15,7 +15,7 @@ const criarCarrinho = async (req, res) => {
 
 }
 
-const listarItens = async (params) => {
+const listarItens = async (req, res) => {
 
     const { id } = req.params;
     try {

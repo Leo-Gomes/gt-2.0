@@ -5,14 +5,14 @@ const jwt = require('jsonwebtoken');
 
 const SECRET = process.env.JWT_SECRET;
 
-async function registrarUsario(firstname, surname, email, password) {
+async function registrarUsuario(firstname, surname, email, password) {
     const usuarioExiste = await encontrarUsuario(email)
-    
     if(usuarioExiste){
         throw new Error('Email já cadastrado')
     }
-
+    
     const senhaCriptografada = await bcrypt.hash(password, 10);
+    console.log(senhaCriptografada)
     const user = await criarUsuario({firstname, surname, email, password: senhaCriptografada})
     return {
         id: user.id,
@@ -29,7 +29,7 @@ async function loginUsuario( email, password) {
         throw new Error('Usuário não encontrado')
     }
 
-    const senhaValida = bcrypt.compare(password, user.password)
+    const senhaValida = await bcrypt.compare(password, user.password)
     if(!senhaValida){
         throw new Error('Senha inválida')
     }
@@ -42,5 +42,5 @@ async function loginUsuario( email, password) {
 }
 
 module.exports = {
-    registrarUsario, loginUsuario
+    registrarUsuario, loginUsuario
 }

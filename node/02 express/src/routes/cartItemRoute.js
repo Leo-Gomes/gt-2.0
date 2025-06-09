@@ -1,8 +1,9 @@
 
 const router = require("express").Router();
 const {inserirItens, alterarItens, deletarItens} = require('../controllers/cartItemController');
+const authMiddleware = require('../middleware/AuthMiddleware.js')
 
-
+// router.use(authMiddleware)
 
 // Insere itens no carrinho
 router.post('/', inserirItens);

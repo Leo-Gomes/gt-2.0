@@ -1,20 +1,18 @@
-const { PrismaClient } = require("@prisma/client");
+const { PrismaClient } = require('@prisma/client')
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
-const testConnection = async () => {
+async function testConnection() {
     try {
-        await prisma.$connect();
-        console.log("Conexão com o banco estabelecida!")
+      await prisma.$connect();
+      console.log("Conexão com o banco estabelecida!");
     } catch (error) {
-        console.error("Erro ao conectar: ", error)
+      console.error("Erro ao conectar:", error);
     } finally {
-        await prisma.$disconnect();
+      await prisma.$disconnect();
     }
-}
+  }
+  
+  testConnection();
 
-testConnection();
-
-module.exports = {
-    prisma
-}
+module.exports = prisma
