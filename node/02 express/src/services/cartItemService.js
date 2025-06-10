@@ -4,12 +4,12 @@ const { cartCheck } = require("../repositories/cartRepository");
 
 async function inserirItensService(cart_id, product_id, quantity) {
     console.log(cart_id, product_id, quantity);
-        // const carrinhoCheck = await cartCheck(cart_id)
-        // if(!carrinhoCheck){
-        //     const error = new Error("Carrinho não encontrado")
-        //     error.status = 404;
-        //     throw error;
-        // }
+        const carrinhoCheck = await cartCheck(cart_id)
+        if(!carrinhoCheck){
+            const error = new Error("Carrinho não encontrado")
+            error.status = 404;
+            throw error;
+        }
     
         
         if(!Number.isInteger(cart_id) || !Number.isInteger(product_id) || !Number.isInteger(quantity)){
@@ -17,7 +17,7 @@ async function inserirItensService(cart_id, product_id, quantity) {
             error.status = 400;
             throw error;
         }
-       return await inserirIntensRepository({cart_id, product_id, quantity})
+       return await inserirIntensRepository(cart_id, product_id, quantity)
 }
 
 

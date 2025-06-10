@@ -2,20 +2,33 @@ const express = require('express')
 const cartRouter = require('./src/routes/cartRoute')
 const cartItemRouter = require('./src/routes/cartItemRoute')
 const userRouter = require('./src/routes/userRoute')
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+
+  // #swagger.tags = ['documentacao']
+
+  // #swagger.summary = 'Redireciona para documentação API'
+  res.redirect('./docs')
 })
 
-app.use('/v1/cart', cartRouter);
-app.use('/v1/item', cartItemRouter);
-app.use('/v1/user', userRouter);
+app.use('/v1/cart', 
+  // #swagger.tags = ['carrinho']
+  cartRouter);
+app.use('/v1/item', 
+  // #swagger.tags = ['carrinho-item']
+  cartItemRouter);
+app.use('/v1/user', 
+  // #swagger.tags = ['usuario']
+  userRouter);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`API documentation:${port}/docs`);
 })

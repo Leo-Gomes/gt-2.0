@@ -20,13 +20,13 @@ const inserirItens = async (req, res) => {
     }
 }
 
-const alterarItens = async (params) => {
+const alterarItens = async (req, res) => {
 
-    const { id } = params;
+    const { id } = req.params;
     const { quantity } = req.body;
 
     try {
-        const result = await alterarItensService
+        const result = await alterarItensService(id, quantity)
 
         res.status(200).json(result);
     } catch (error) {

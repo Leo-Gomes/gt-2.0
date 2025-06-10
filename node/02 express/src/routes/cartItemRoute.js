@@ -5,14 +5,20 @@ const authMiddleware = require('../middleware/AuthMiddleware.js')
 
 // router.use(authMiddleware)
 
-// Insere itens no carrinho
-router.post('/', inserirItens);
 
-// Alterar a quantidade item carrinho
-router.put('/:id', alterarItens);
+router.post('/', 
+    //#swagger.summary = 'Insere itens no carrinho'
+    inserirItens);
+
+
+router.put('/:id', 
+    //#swagger.summary = 'Altera a quantidade de itens no carrinho'
+    alterarItens);
 
 
 // Deleta um item do carrinho
-router.delete('/:id', deletarItens);
+router.delete('/:id', 
+    //#swagger.summary = 'Deleta itens do carrinho'
+    deletarItens);
 
 module.exports = router;
