@@ -16,11 +16,14 @@ const criarCarrinho = async (req, res) => {
 }
 
 const listarItens = async (req, res) => {
-    
+    const {page, limit} = req.query;
     const user = req.user.id;
     const { id } = req.params;
+
+    const pageNumber = Number(page);
+    const limitNumber = Number(limit);
     try {
-        const result = await listarCarrinhoService(id, user)
+        const result = await listarCarrinhoService(id, user, pageNumber, limitNumber);
         res.status(200).json(result);
     } catch (error) {
         console.log(`Erro ao listar itens do carrinho ${error}`);
@@ -29,7 +32,7 @@ const listarItens = async (req, res) => {
 }
 
 const limparCarrinho = async (req, res) => {
-    const user = req.user.id
+    const user = req.user.id;
     const { id } = req.params;
     try {
         await limparCarrinhoService(id, user)

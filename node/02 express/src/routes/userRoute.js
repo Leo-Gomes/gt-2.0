@@ -10,6 +10,8 @@ router.post('/register',
 router.post('/login', 
     // #swagger.summary = 'Login de usuário'
     // #swagger.description = 'Autentica um usuário com email e senha. Retorna um token JWT'
+    // #swagger.responses[200] = {description: 'login'}
+    // #swagger.responses[401] = 'Autentica um usuário com email e senha. Retorna um token JWT'
     login);
 
 module.exports = router;
