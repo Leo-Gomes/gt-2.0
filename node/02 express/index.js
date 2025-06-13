@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'https://sprint2-omega.vercel.app/'
 }))
 app.use(express.json());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
